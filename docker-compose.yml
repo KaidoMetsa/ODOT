@@ -7,7 +7,9 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
+      - ./backend/todo_backend:/app/todo_backend
+      - ./backend/todos:/app/todos
+      - ./backend/manage.py:/app/manage.py
     environment:
       - DEBUG=1
 
